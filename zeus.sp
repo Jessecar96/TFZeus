@@ -1,6 +1,8 @@
 #include <sourcemod>
 #include "include.sp"
 
+#pragma semicolon 1
+
 public Plugin:myinfo =
 {
 	name = "Zeus",
@@ -12,5 +14,6 @@ public Plugin:myinfo =
 
 public OnPluginStart()
 {
+	ManageConVars();
 	//Something goes here
 }
