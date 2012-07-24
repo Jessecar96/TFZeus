@@ -16,5 +16,6 @@ public OnPluginStart()
 {
 	ManageConVars();
 	HookPlayerChat();
+	ManageAdminCommands();
 	//Something goes here
 }
