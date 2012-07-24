@@ -14,6 +14,20 @@ public OnClientPostAdminCheck(index)
 }
 
 /*
+ * If Zeus leaves, we need to reset the level.  It's bad for the game
+ * to keep the users playing when zeus doesn't exist.
+*/
+public OnClientDisconnect_Post(client)
+{
+	if( client == cl_Zeus )
+	{
+		PrintToChatAll("Zeus left.  He sucks!  Oh well, moving on...");
+		EmitSoundToAll("misc/your_team_lost.wav");
+		ServerCommand("mp_restartgame 1");
+	}
+}
+
+/*
  * Add karma to a user.
  *
  * @param userid	The client's index.
@@ -27,6 +41,19 @@ public AddKarmaToUser(userid, amount)
 }
 
 /*
+ * Remove karma from a user.
+ *
+ * @param userid	The client's index.
+ * @param amount	The amount to decrement by.
+*/
+public RemoveKarmaFromUser(userid, amount)
+{
+	new karma = GetKarma(userid);
+	karma-= amount;
+	SetKarma(userid, karma);
+}
+
+/*
  * Get the user's ratio of karma.  The ratio is the user's karma over
  * the default value.  Mainly used as a damage modifier.
  *
@@ -35,7 +62,7 @@ public AddKarmaToUser(userid, amount)
 public Float:GetKarmaRatio(userid)
 {
 	new karma = GetKarma(userid);
-	return karma / GetConVarInt(cv_hDefaultKarma);
+	return FloatDiv(float(karma), GetConVarFloat(cv_hDefaultKarma));
 }
 
 /*

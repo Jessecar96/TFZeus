@@ -1,4 +1,5 @@
 #include <sourcemod>
+#include <sdktools>
 #include "include.sp"
 
 #pragma semicolon 1

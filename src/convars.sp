@@ -3,6 +3,8 @@ public Handle:cv_hMaxKarma;
 public Handle:cv_hMinKarma;
 public Handle:cv_hDefaultKarma;
 public Handle:cv_hEnabled;
+public Handle:cv_hRegenKarmaRate;
+public Handle:cv_hKillKarmaPenalty;
 
 // define the convars
 /**
@@ -49,6 +51,24 @@ public ManageConVars()
 		"zs_default_karma",
 		"1000",
 		"The default karma a joining user will have.",
+		FCVAR_SPONLY,
+		true,
+		0.0
+	);
+
+	cv_hRegenKarmaRate = CreateConVar(
+		"zs_regen_karma_rate",
+		"10",
+		"The amount of karma to rengenerate each round.",
+		FCVAR_SPONLY,
+		true,
+		0.0
+	);
+
+	cv_hKillKarmaPenalty = CreateConVar(
+		"zs_kill_karma_penalty",
+		"100",
+		"The amount of karma to remove after each kill of a non-zeus player.",
 		FCVAR_SPONLY,
 		true,
 		0.0
