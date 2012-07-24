@@ -1,7 +1,7 @@
 new Handle:cv_hVersion;
-new Handle:cv_hMaxKarma;
-new Handle:cv_hMinKarma;
-new Handle:cv_hDefaultKarma;
+public Handle:cv_hMaxKarma;
+public Handle:cv_hMinKarma;
+public Handle:cv_hDefaultKarma;
 public Handle:cv_hEnabled;
 
 // define the convars
