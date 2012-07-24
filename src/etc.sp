@@ -1,0 +1,3 @@
+/*
+	Contains etc things required for the gamemode to run.
+*/
