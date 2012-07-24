@@ -16,7 +16,7 @@ public cl_NextZeus;
  * randomly, and in rare cases may even be the same thing.
  *
  * If there's no clients in the server, zeus will always be client
- * number 1 (based on how GetRandomInt works).
+ * number 0.
  *
  * @noreturn
 */
