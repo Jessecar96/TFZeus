@@ -25,7 +25,7 @@ public ChooseNewZeus()
 	new clientCount = GetClientCount();
 	if( clientCount == 0 )
 	{
-		ClearZeus();
+		ClearZeus(true);
 		return;
 	}
 	if( cl_NextZeus > 0 )
@@ -47,7 +47,7 @@ public ChooseNewZeus()
  * @param IncludeNextZeus include the next zeus from being cleared as well.
  * @noreturn;
 */
-public ClearZeus(bool:IncludeNextZeus=true)
+public ClearZeus(bool:IncludeNextZeus)
 {
 	cl_Zeus = 0;
 	if( IncludeNextZeus )
@@ -59,6 +59,6 @@ public ClearZeus(bool:IncludeNextZeus=true)
 
 NotifyNewZeus()
 {
-	PrintToClient(cl_Zeus, "\0x04You are now Zeus!  Go get 'em, boy!");
+	PrintToChat(cl_Zeus, "You are now Zeus!  Go get 'em, boy!");
 	return;
 }

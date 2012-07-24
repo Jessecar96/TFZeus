@@ -19,3 +19,14 @@ public OnPluginStart()
 	ManageAdminCommands();
 	//Something goes here
 }
+
+/*
+ * Get the plugin's version.  It takes it and sets it into the buffer
+ * given.
+ *
+ * @param buffer	the string to set the version to
+*/
+public GetPluginVersion(String:buffer[20])
+{
+	buffer = "0.0.1";
+}

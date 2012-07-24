@@ -18,9 +18,12 @@ public ManageConVars()
 {
 	AddServerTag("Zeus");
 
+	decl String:version[20];
+	GetPluginVersion(version);
+
 	cv_hVersion  = CreateConVar(
 		"zs_version",
-		"0.0.1",
+		version,
 		"The version of the Zeus plugin."
 	);
 
