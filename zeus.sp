@@ -15,5 +15,6 @@ public Plugin:myinfo =
 public OnPluginStart()
 {
 	ManageConVars();
+	HookPlayerChat();
 	//Something goes here
 }
