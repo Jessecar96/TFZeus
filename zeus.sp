@@ -8,7 +8,7 @@ public Plugin:myinfo =
 	name = "Zeus",
 	author = "Jessecar96 & Dr. Cat, MD",
 	description = "This is a gamemode",
-	version = "1.0",
+	version = "0.0.1",
 	url = "jessecar96.net"
 }
 
@@ -17,6 +17,7 @@ public OnPluginStart()
 	ManageConVars();
 	HookPlayerChat();
 	ManageAdminCommands();
+	HookEvents();
 	//Something goes here
 }
 
